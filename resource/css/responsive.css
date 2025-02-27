@@ -1570,6 +1570,26 @@
         flex-direction: column;
     }
 
+    .voca.result.speedVoca .deco{
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .voca.result.speedVoca .deco .thumb{
+        display: none;
+    }
+
+    .voca.result.speedVoca .result-box{
+        width: 100%;
+        height: auto;
+    }
+
+    .voca.result.speedVoca .result-box .color-box::after{
+        display: none;
+    }
+
     .voca.step01 .card-wrap li{
         width: calc((100% - (var(--gap) / 2)) / 2);
         height: calc((100% - (var(--gap) / 2) * 7)/8);

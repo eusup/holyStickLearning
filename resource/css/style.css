@@ -958,6 +958,147 @@
 }
 
 /** step 00 **/
+.voca.step00.speedVoca .btn-wrap{
+  justify-content: center;
+}
+
+.voca.step00.speedVoca .btn-wrap .flex{
+  justify-content: center;
+  gap: 24pxc;
+  width: 130px;
+  padding: 14px 24px;
+  border-radius: 100px;
+  background-color: var(--color-white40);
+  box-shadow: inset 2px 2px 4px var(--color-shadow);
+  font-size: var(--font-size5);
+  font-weight: 600;
+  &.wrong{
+    color: var(--color-font-red);
+  }
+  &.correct{
+    color: var(--color-font-green);
+  }
+}
+
+.voca.result.speedVoca .deco{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.voca.result.speedVoca .deco h3{
+  margin-bottom: var(--gap);
+}
+
+
+.voca.result.speedVoca .deco .thumb{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.voca.result.speedVoca .deco .thumb img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 600px;
+  width: 100%;
+  height: 100%;
+}
+
+.voca.result.speedVoca .result-box{
+  flex-direction: column;
+  gap: var(--gap);
+  width: 60%;
+}
+
+.voca.result.speedVoca .result-box .color-box{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 430px;
+  height: 100%;
+  padding: var(--padding);
+  background: linear-gradient(#9823C9 , #7C23C9);
+  border-radius: var(--radius);
+  color: var(--color-white-hold);
+  font-size: var(--font-size5);
+  box-shadow: 0px 0px 20px var(--color-shadow);
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/v-speedVoca-result-bg.svg);
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 64px;
+    width: 280px;
+    height: 120px;
+    background-image: url(../images/v-speedVoca-result-chara.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.voca.result.speedVoca .result-box .color-box .grade{
+  font-size: 86px;
+  font-weight: 800;
+  & span{
+    padding-left: 10px;
+    font-size: var(--font-size7);
+  }
+}
+
+.voca.result.speedVoca .result-box .color-box .btn{
+  position: relative;
+  margin-top: auto;
+  margin-left: auto;
+  font-size: var(--font-size4);
+  background: linear-gradient(var(--color-white10) , var(--color-white0));
+  border-top: 1px solid var(--color-white60);
+  box-shadow: 0px 4px 4px rgba( 0,0,0,0.2);
+  backdrop-filter: blur(10px);
+}
+
+.voca.result.speedVoca .result-box .box{
+  gap: 0;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  padding: var(--padding);
+  font-size: var(--font-size4);
+  background: linear-gradient(var(--color-white60), var(--color-white20));
+  box-shadow: 0px 0px 20px var(--color-shadow);
+}
+
+.voca.result.speedVoca .result-box .box .count{
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+  &:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.voca.result.speedVoca .result-box .box .count>div{
+  gap: 8px;
+  width: 100%;
+  font-weight: 700;
+}
+
 .voca .bottom .btn .num {
   width: 28px;
   height: 28px;

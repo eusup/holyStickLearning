@@ -81,9 +81,7 @@ $(document).ready(function () {
     });
 
     // 다크모드 테스트
-    $(".darkMode-btn").click(function(){
-        $(this).toggleClass("act");
-        $(this).find("i").toggleClass("act");
+    $("body").dblclick(function(){
         $(".wrap").toggleClass("dark");
     });
 });

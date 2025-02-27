@@ -75,6 +75,16 @@
 @media screen and (max-width : 1366px) {
     :root {
         --gap: 20px;
+        --padding: 20px;
+        --radius: 20px;
+        --font-size8: 5.4rem;
+        --font-size7: 4.8rem;
+        --font-size6: 3.6rem;
+        --font-size5: 2.4rem;
+        --font-size4: 1.8rem;
+        --font-size3: 1.6rem;
+        --font-size2: 1.4rem;
+        --font-size1: 1.3rem;
     }
 
     .top .con {
@@ -83,9 +93,6 @@
 
     .box {
         width: calc(100% - 40px);
-        padding: 20px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
     }
 
     .top h2 {
@@ -217,18 +224,13 @@
         font-size: 1.6rem;
     }
 
-    .pill-wrap {
-        padding: 20px;
-        border-radius: 20px;
-    }
 
     .pill-wrap ul {
         gap: 8px;
-        font-size: 2.4rem;
     }
 
     .pill-wrap ul li {
-        padding: 12px 18px;
+        padding: 14px;
         box-shadow: inset 3px 3px 6px var(--color-shadow);
 
         &.wrong {
@@ -241,7 +243,6 @@
 
         & input {
             padding: 12px 18px;
-            font-size: 2.4rem;
         }
     }
 
@@ -392,8 +393,6 @@
     }
 
     .dimmed .popup.alert {
-        padding: 20px;
-        border-radius: 20px;
         font-size: 1.6rem;
     }
 
@@ -611,10 +610,6 @@
         height: 50px;
     }
 
-    .voca .question-wrap .question-scroll{
-        font-size: 5.4rem;
-    }
-
     .voca.step01 .card-wrap li .btn .card-cover::before{
         width: 72px;
         height: 72px;
@@ -625,11 +620,11 @@
     }
 
     .voca.step02 .question-wrap .question-scroll .description{
-        font-size: 2.4rem;
+        font-size: var(--font-size5);
     }
 
     .voca.step02 .question-wrap .sentence{
-        font-size: 2rem;
+        font-size: var( --font-size4);
     }
 
     .voca.step03 .question-wrap .question-scroll .sentence{
@@ -683,12 +678,10 @@
 
     .voca.step05 .hint-area ul li{
         margin-bottom: 24px;
-        font-size: 2.4rem;
     }
 
     .voca.step05 .hint-area span{
         width: 110px;
-        font-size: 1.8rem;
     }
 
     .voca.step06 .option{
@@ -719,10 +712,6 @@
 
     .voca.step01 .card-wrap li .btn span{
         font-size: 1.6rem;
-    }
-
-    .voca .question-wrap .question-scroll{
-        font-size: 4.8rem;
     }
 
     .voca.step03.type03 .question-wrap .question-scroll{
@@ -760,12 +749,27 @@
     .voca.step06 .question-wrap .talk-wrap .scroll-script .btn-wrap .btn{
         padding: 14px 20px;
     }
+
+    .dimmed .alert p{
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
 }
 
 @media screen and (max-width : 768px) {
-    
     :root {
         --gap: 10px;
+        --padding: 10px;
+        --radius: 10px;
+
+        --font-size8: 4.8rem;
+        --font-size7: 3.6rem;
+        --font-size6: 2.4rem;
+        --font-size5: 1.8rem;
+        --font-size4: 1.6rem;
+        --font-size3: 1.4rem;
+        --font-size2: 1.3rem;
+        --font-size1: 1.2rem;
     }
 
     .top {
@@ -836,9 +840,11 @@
         flex-shrink: 1;
     }
 
-    .video::before{
+
+    /* 이거 지우자 */
+    /* .video::before{
         display: none;
-    }
+    } */
 
     .video .btn {
         width: 48px;
@@ -901,9 +907,8 @@
         background-size: 36px;
     }
 
-    .pill-wrap {
-        padding: 10px;
-        border-radius: 10px;
+    .listening .con:has(.pill-wrap){
+        justify-content: flex-start;
     }
 
     .pill-wrap ul {
@@ -912,18 +917,13 @@
     }
 
     .pill-wrap ul li {
-        padding: 12px 14px;
         font-size: 1.6rem;
+        padding: 10px;
 
         & input {
             font-size: 1.8rem;
-            padding: 12px 14px;
+            padding: 10px;
         }
-    }
-
-    .pill-wrap.answer ul li {
-        padding: 14px 16px;
-        font-size: 1.6rem;
     }
 
     .pill-wrap li.next .hint {
@@ -965,13 +965,16 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 24px;
-        height: auto;
     }
 
     .rec-wrap+.btn.next{
         position: static;
         transform: translate(0);
         margin-left: auto;
+    }
+
+    .speaking.step02 .wave-wrap{
+        height: 80px;
     }
 
     .speaking.step02 .wave-wrap .wave span{
@@ -991,16 +994,16 @@
         }
     }
 
+    .con:has(.next-q){
+        padding-top: 48px;
+    }
+
     .btn.prev-q {
         transform: translateY(0) rotate(180deg);
     }
 
     .voca.step00.type02 .con.fill .question-wrap{
         height: 50%;
-    }
-
-    .listening .step04 .pill-wrap.answer {
-        height: 100%;
     }
 
     .dimmed .popup.result>div:not(.effect) {
@@ -1014,8 +1017,9 @@
     }
 
     .dimmed .popup.alert {
-        padding: 10px;
-        border-radius: 10px;
+        max-width: 320px;
+        padding: 24px;
+        font-size: 1.4rem;
         line-height: 1.4;
     }
 
@@ -1242,7 +1246,7 @@
     }
 
     .listening.step03 .con.fill{
-        gap: calc(var(--gap) * 2);
+        gap: var(--gap);
     }
 
     .listening.step03 .video-wrap {
@@ -1250,16 +1254,9 @@
         height: auto;
     }
 
-    .listening.step03 .video-wrap:has(.video){
-        height: 100%;
-    }
-
     .listening.step03 .pill-wrap.bg{
         height: auto;
-    }
-
-    .listening.step04 .con:has(.pill-wrap){
-        padding-top: 36px;
+        padding: 8px;
     }
 
     .listening .step04 .con:has(.video-wrap) {
@@ -1271,13 +1268,8 @@
     }
 
     .listening.step04 .pill-wrap ul {
-        height: 100%;
         margin: 0;
         align-content: center;
-    }
-
-    .listening.step04 .pill-wrap.answer ul li {
-        padding: 10px 18px;
     }
 
     .lestening .step04+.dimmed .alert::before {
@@ -1290,6 +1282,22 @@
         top: -80px;
         width: 160px;
         height: 160px;
+    }
+
+    .listening.step04+.dimmed .alert::before{
+        width: 200px;
+        height: 100px;
+        top: -100px;
+    }
+
+    .listening.step04+.dimmed .alert::after{
+        width: 120px;
+        height: 120px;
+        top: -60px;
+    }
+
+    .speaking.step01 .video{
+        height: auto;
     }
 
     .speaking .video-wrap {
@@ -1428,6 +1436,14 @@
 
     .speaking.step04 .video.rec::before{
         display: none;
+    }
+
+    .speaking.step04 .video-wrap .video{
+        height: auto;
+    }
+
+    .speaking.step04 .video-wrap .video video{
+        position: relative;
     }
 
     .speaking.result .box h4{
@@ -1652,7 +1668,7 @@
     }
 
     .voca.step06 .contents-wrap .box{
-        height: auto;
+        height: 100%;
     }
 
     .voca.step06 .flex:has(.option){
@@ -1673,7 +1689,7 @@
     }
 
     .voca.step06 .option{
-        width: calc(100% - 30px);
+        width: 100%;
         height: auto;
     }
 
@@ -1702,17 +1718,11 @@
         border-radius: 10px;
     }
 
-    .voca.step06 .question-wrap .talk-wrap,
-    .voca.step06 .question-wrap{
-        height: auto;
-    }
-
     .voca.step06 .question-wrap .talk-wrap .scroll-script{
-        position: static;
-        height: auto;
-        margin-top: 30px;
+        height: calc(100% - 20px );
+        margin-top: 20px;
         padding: 0px 6px;
-        padding-top: 30px;
+        padding-top: 20px;
         border-top: 1px solid var(--color-border);
     }
 
@@ -1742,14 +1752,34 @@
         flex-wrap: wrap;
     }
 
+    .video-wrap,
+    .video-wrap .video
+    .video-wrap .video video{
+        height: auto;
+    }
+
+    .con:has(.scroll-script) .video-wrap{
+        height: 100%;
+    }
+
+    .video-wrap .video video{
+        position: relative;
+    }
+    
+
     .btn-wrap .rec-wrap{
         gap: 12px;
         width: 100%;
+        margin: 24px 0;
         order: 1;
     }
 
     .speaking .btn-wrap .pass{
         order: 2;
+    }
+
+    .speaking .btn-wrap:has(.rec-wrap){
+        height: auto;
     }
 
     .rec-wrap+.btn.next{
@@ -1831,11 +1861,6 @@
 }
 
 @media screen and (max-height : 800px){
-    .pill-wrap ul li,
-    .pill-wrap.answer ul li{
-        padding: 8px 12px;
-    }
-
     .listening.step03 .pill-wrap.answer{
         height: auto;
     }

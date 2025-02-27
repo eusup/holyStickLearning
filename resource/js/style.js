@@ -63,6 +63,11 @@ $(document).ready(function () {
         $(this).find("img").toggleClass("act");
     });
 
+    // (스피킹) 녹화버튼
+    $(".speaking.step04 .video.rec .btn.rec").click(function(){
+        $(this).toggleClass("act");
+    });
+
     // (보카) step1 카드 뒤집기
     $(".voca.step01 .card-wrap li").click(function(){
         $(this).addClass("act");

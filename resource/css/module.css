@@ -126,11 +126,15 @@
   --duration: 0.3s;
   --gap: 30px;
   --padding: 30px;
-  --font-Z: 5.4rem;
-  --font-V: 4.2rem;
-  --font-L: 3.6rem;
-  --font-R: 1.8rem;
-  --font-S: 1.6rem;
+  --radius: 30px;
+  --font-size8: 6.4rem;
+  --font-size7: 5.4rem;
+  --font-size6: 4.2rem;
+  --font-size5: 3.6rem;
+  --font-size4: 2.4rem;
+  --font-size3: 1.8rem;
+  --font-size2: 1.6rem;
+  --font-size1: 1.4rem;
 }
 
 /* color */
@@ -202,10 +206,11 @@ video {
 }
 
 video {
-  position: absolute;
+  /* 지우자 */
+  /* position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
-  left: 50%;
+  left: 50%; */
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -315,6 +320,7 @@ i {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 64px;
   gap: 10px;
 }
 
@@ -500,9 +506,9 @@ button,
   width: calc(100% - 60px);
   height: 100%;
   margin: 0 auto;
-  padding: 30px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  padding: var(--padding);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
   background: linear-gradient(var(--color-white60), var(--color-white20));
   box-shadow: 0px 0px 20px var(--color-shadow);
 }
@@ -671,12 +677,13 @@ button,
   height: 100%;
   margin: 0 auto;
 
-  &::before {
+  /* 지우자 */
+  /* &::before {
     content: "";
     display: block;
     width: 100%;
     padding-top: 56.25%;
-  }
+  } */
 }
 
 .video .btn {
@@ -1116,8 +1123,8 @@ audio{
 .pill-wrap {
   width: 100%;
   align-items: center;
-  padding: 30px;
-  border-radius: 30px;
+  padding: var(--padding);
+  border-radius: var(--gap);
 
   &.answer {
     justify-content: center;
@@ -1135,8 +1142,8 @@ audio{
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  font-size: 2.8rem;
   font-weight: 700;
+  font-size: var(--font-size4);
 }
 
 .pill-wrap.answer li {
@@ -1155,6 +1162,10 @@ audio{
   box-shadow: inset 6px 6px 12px var(--color-shadow);
   color: transparent;
   cursor: pointer;
+
+  & *{
+    font-size: var(--font-size4);
+  }
 
   & span {
     color: transparent;
@@ -1209,9 +1220,12 @@ audio{
     width: 100%;
     height: 100%;
     padding: 14px 36px;
-    font-size: 2.8rem;
     font-weight: 700;
   }
+}
+
+.pill-wrap li.correct:has(input) span{
+  color: transparent;
 }
 
 .pill-wrap li.next .hint {
@@ -1628,8 +1642,8 @@ audio{
   left: 50%;
   width: calc(100% - 30px);
   max-width: 480px;
-  padding: 36px;
-  border-radius: 30px;
+  padding: var(--padding);
+  border-radius: var(--radius);
   background-color: var(--color-white);
   font-size: 1.8rem;
   line-height: 1.6;

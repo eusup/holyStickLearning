@@ -1169,6 +1169,7 @@ audio{
 
   & span {
     color: transparent;
+    padding: 0px 4px;
   }
 
   &.hint {
